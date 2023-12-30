@@ -7,5 +7,7 @@
  * "dev":"nodemon nomApp.js"
  * 3-utiliser le framework express en mode Production
  * au demarage de l'application en mode Production
+ * "start":"NODE_ENV=PRODUCTION node appName.js"
+ *
  * 4-Les dependences de developpement ne sont plus utiliser en Production
  */
