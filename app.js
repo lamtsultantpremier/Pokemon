@@ -7,7 +7,7 @@ let localhost = "localhost";
 const port = process.env.PORT || 3000;
 app.use(bodyParser.json()).use(morgan("dev"));
 app.get("/", (req, res) => {
-  res.json("Hello Heroku");
+  res.send("Hello Render");
 });
 sequelize.initDB();
 //find All the Pokemon
