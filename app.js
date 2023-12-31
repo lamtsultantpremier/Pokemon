@@ -1,5 +1,4 @@
 const express = require("express");
-const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const sequelize = require("./src/db/sequelize");
 const app = express();
