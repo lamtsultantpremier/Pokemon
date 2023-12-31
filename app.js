@@ -4,7 +4,7 @@ const sequelize = require("./src/db/sequelize");
 const app = express();
 let localhost = "localhost";
 const port = process.env.PORT || 3000;
-app.use(bodyParser.json()).use(morgan("dev"));
+app.use(bodyParser.json());
 app.get("/", (req, res) => {
   res.send("Hello Render");
 });
