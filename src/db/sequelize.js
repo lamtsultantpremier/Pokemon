@@ -11,6 +11,7 @@ const sequelize = new Sequelize(
     host: process.env.DB_NAME,
     dialect: "mariadb",
     logging: false,
+    port: process.env.DB_PORT || 3306,
   }
 );
 //Instanciation des differents Models
