@@ -3,11 +3,16 @@ const { Sequelize, DataTypes } = require("sequelize");
 const pokemons = require("./mock-pokemon.js");
 const bcrypt = require("bcrypt");
 //Connexion a la base de donnee
-const sequelize = new Sequelize("Pokedex", "root", "", {
-  host: "localhost",
-  dialect: "mariadb",
-  logging: false,
-});
+const sequelize = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
+  {
+    host: process.env.DB_NAME,
+    dialect: "mariadb",
+    logging: false,
+  }
+);
 //Instanciation des differents Models
 const PokemonModel = require("../models/pokemon.js");
 const UserModel = require("../models/user.js");
